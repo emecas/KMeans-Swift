@@ -16,6 +16,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var clusterButton2: UIButton!
     @IBOutlet weak var clearButton: UIButton!
     
+    @IBOutlet weak var centroidsSwitch: UISwitch!
+    
+    //var showCentroids:Bool
+    
+    
     let KMeans = KMeansSwift.sharedInstance
 
     override func viewDidLoad() {
@@ -24,6 +29,7 @@ class ViewController: UIViewController {
         spaceView.addGestureRecognizer(tapGesture)
         spaceView.userInteractionEnabled = true
     }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -57,14 +63,10 @@ class ViewController: UIViewController {
                     }
                 }
                 
-                for vector in centroids{
-                    let pointFrameC = CGRectMake(CGFloat(vector[0]) - 10, CGFloat(vector[1]) - 10, 20.0, 20.0)
-                    let pointC = UIImageView(frame: pointFrameC)
-                    pointC.image = UIImage(named: "gray")
-                    self.spaceView.addSubview(pointC)
+                if(self.centroidsSwitch.on){
+                    self.visualizeCentroids(centroids);
                 }
-                
-                self.visualizeCentroids(centroids);
+
 
             }
             self.setButtonEnable(true)
@@ -98,7 +100,10 @@ class ViewController: UIViewController {
                     }
                 }
                 
-                self.visualizeCentroids(centroids);
+                if(self.centroidsSwitch.on){
+                    self.visualizeCentroids(centroids);
+                }
+
                 
             }
             self.setButtonEnable(true)
@@ -135,6 +140,18 @@ class ViewController: UIViewController {
         KMeans.addVector([Double(location.x), Double(location.y)])
     }
     
+    @IBAction func onSwitchChange(sender: UISwitch) {
+        //showCentroids = !showCentroids
+        if(KMeans.finalCentroids.count >= 2){
+            if(sender.on){
+                visualizeCentroids(KMeans.finalCentroids)
+            }
+            else{
+                removeCentroids(KMeans.finalCentroids)
+            }
+        }
+    }
+    
     private func setButtonEnable(enable:Bool) {
         clusterButton1.enabled = enable
         clusterButton2.enabled = enable
@@ -149,6 +166,20 @@ class ViewController: UIViewController {
             pointC.image = UIImage(named: "gray")
             self.spaceView.addSubview(pointC)
         }
+    }
+    
+    private func removeCentroids(centroids:KMVectors){
+        setButtonEnable(false)
+        for point:UIView in self.spaceView.subviews {
+            for vector in centroids{
+                let point2 = CGRectMake(CGFloat(vector[0]) - 10, CGFloat(vector[1]) - 10, 20.0,20.0)
+                if(point.frame.contains(point2)){
+                    point.removeFromSuperview()
+                }
+            }
+
+        }
+        setButtonEnable(true)
     }
 
 }

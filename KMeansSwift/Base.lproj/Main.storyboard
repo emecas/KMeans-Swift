@@ -19,28 +19,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G4U-75-yVh">
-                                <rect key="frame" x="20" y="84" width="560" height="452"/>
+                                <rect key="frame" x="20" y="84" width="560" height="403"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Nh-C8-sa2">
-                                <rect key="frame" x="20" y="552" width="150" height="30"/>
-                                <color key="backgroundColor" red="0.27058823529999998" green="0.35294117650000001" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="ai2-7C-ask"/>
-                                </constraints>
-                                <state key="normal" title="3 Clusters">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBound" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="start3Clustering:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SNv-l7-wmD"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHr-dG-8Pb">
                                 <rect key="frame" x="430" y="552" width="150" height="30"/>
                                 <color key="backgroundColor" red="0.27058823529999998" green="0.35294117650000001" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
@@ -79,23 +60,67 @@
                                     <action selector="start2Clustering:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ANI-jm-NJu"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show Centroids" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x9V-9d-Qht">
+                                <rect key="frame" x="18" y="506" width="121" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="y73-gg-bBG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2e1-TE-D0P">
+                                <rect key="frame" x="154" y="501" width="51" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="eMz-ju-vkE"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onSwitchChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="JYB-Pg-Mav"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Nh-C8-sa2">
+                                <rect key="frame" x="20" y="552" width="150" height="30"/>
+                                <color key="backgroundColor" red="0.27058823529999998" green="0.35294117650000001" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ai2-7C-ask"/>
+                                </constraints>
+                                <state key="normal" title="3 Clusters">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBound" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="start3Clustering:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SNv-l7-wmD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="2e1-TE-D0P" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="154" id="06L-LJ-pll"/>
+                            <constraint firstItem="2e1-TE-D0P" firstAttribute="leading" secondItem="x9V-9d-Qht" secondAttribute="trailing" constant="15" id="1NQ-Nr-MsD"/>
                             <constraint firstItem="0Nh-C8-sa2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="3Uj-TI-qTG"/>
                             <constraint firstItem="UHr-dG-8Pb" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:4" id="5gB-Zy-Dgi"/>
                             <constraint firstItem="NZs-GU-G62" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="89A-JB-JCe"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="G4U-75-yVh" secondAttribute="bottom" constant="64" id="96m-RW-Xnb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="G4U-75-yVh" secondAttribute="bottom" constant="113" id="96m-RW-Xnb"/>
                             <constraint firstItem="G4U-75-yVh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="9y8-Xq-vff"/>
+                            <constraint firstItem="2e1-TE-D0P" firstAttribute="top" secondItem="G4U-75-yVh" secondAttribute="bottom" constant="14" id="MAC-Te-uUA"/>
                             <constraint firstItem="NZs-GU-G62" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:4" id="O6T-F2-UPi"/>
-                            <constraint firstItem="NZs-GU-G62" firstAttribute="top" secondItem="G4U-75-yVh" secondAttribute="bottom" constant="16" id="PCs-Bu-Ser"/>
+                            <constraint firstItem="NZs-GU-G62" firstAttribute="top" secondItem="G4U-75-yVh" secondAttribute="bottom" constant="65" id="PCs-Bu-Ser"/>
                             <constraint firstItem="G4U-75-yVh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="TdS-D4-975"/>
                             <constraint firstItem="0Nh-C8-sa2" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:4" id="Zzr-Cv-qfB"/>
                             <constraint firstItem="G4U-75-yVh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="bag-EY-epC"/>
                             <constraint firstItem="UHr-dG-8Pb" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="e8A-nw-8dE"/>
                             <constraint firstItem="G4U-75-yVh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="izJ-tZ-lcV"/>
-                            <constraint firstItem="UHr-dG-8Pb" firstAttribute="top" secondItem="G4U-75-yVh" secondAttribute="bottom" constant="16" id="rwr-Jt-W3S"/>
-                            <constraint firstItem="0Nh-C8-sa2" firstAttribute="top" secondItem="G4U-75-yVh" secondAttribute="bottom" constant="16" id="u1y-EA-vgR"/>
+                            <constraint firstItem="2e1-TE-D0P" firstAttribute="centerY" secondItem="x9V-9d-Qht" secondAttribute="centerY" id="rkQ-p1-nXq"/>
+                            <constraint firstItem="UHr-dG-8Pb" firstAttribute="top" secondItem="G4U-75-yVh" secondAttribute="bottom" constant="65" id="rwr-Jt-W3S"/>
+                            <constraint firstItem="0Nh-C8-sa2" firstAttribute="top" secondItem="G4U-75-yVh" secondAttribute="bottom" constant="65" id="u1y-EA-vgR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="G4U-75-yVh" secondAttribute="trailing" id="xaC-9e-4JK"/>
                         </constraints>
                         <variation key="default">
@@ -120,6 +145,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="centroidsSwitch" destination="2e1-TE-D0P" id="Ms6-pP-1y4"/>
                         <outlet property="clearButton" destination="UHr-dG-8Pb" id="m3B-UY-2ky"/>
                         <outlet property="clusterButton1" destination="0Nh-C8-sa2" id="dAL-8p-4xh"/>
                         <outlet property="clusterButton2" destination="NZs-GU-G62" id="f4C-i2-2Yg"/>
