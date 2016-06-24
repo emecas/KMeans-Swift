@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1CBE05861D19216F008573BC /* KMeansSwift_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CBE05851D19216F008573BC /* KMeansSwift_Tests.m */; };
 		3256FCC41C2977E200FFD557 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3256FCC31C2977E200FFD557 /* AppDelegate.swift */; };
 		3256FCC61C2977E200FFD557 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3256FCC51C2977E200FFD557 /* ViewController.swift */; };
 		3256FCC91C2977E200FFD557 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3256FCC71C2977E200FFD557 /* Main.storyboard */; };
@@ -17,6 +18,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1CBE05871D19216F008573BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3256FCB81C2977E200FFD557 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3256FCBF1C2977E200FFD557;
+			remoteInfo = KMeansSwift;
+		};
 		3256FCD51C2977E200FFD557 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3256FCB81C2977E200FFD557 /* Project object */;
@@ -27,6 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1CBE05811D19216F008573BC /* KMeansSwift Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "KMeansSwift Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CBE05841D19216F008573BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CBE05851D19216F008573BC /* KMeansSwift_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMeansSwift_Tests.m; sourceTree = "<group>"; };
 		3256FCC01C2977E200FFD557 /* KMeansSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KMeansSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3256FCC31C2977E200FFD557 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3256FCC51C2977E200FFD557 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +52,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1CBE057E1D19216F008573BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3256FCBD1C2977E200FFD557 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -58,12 +76,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1CBE05821D19216F008573BC /* KMeansSwift Tests */ = {
+			isa = PBXGroup;
+			children = (
+				1CBE05851D19216F008573BC /* KMeansSwift_Tests.m */,
+				1CBE05831D19216F008573BC /* Supporting Files */,
+			);
+			path = "KMeansSwift Tests";
+			sourceTree = "<group>";
+		};
+		1CBE05831D19216F008573BC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1CBE05841D19216F008573BC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		3256FCB71C2977E200FFD557 = {
 			isa = PBXGroup;
 			children = (
 				3256FCE31C29781C00FFD557 /* KMeans */,
 				3256FCC21C2977E200FFD557 /* KMeansSwift */,
 				3256FCD71C2977E200FFD557 /* KMeansSwiftTests */,
+				1CBE05821D19216F008573BC /* KMeansSwift Tests */,
 				3256FCC11C2977E200FFD557 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,6 +109,7 @@
 			children = (
 				3256FCC01C2977E200FFD557 /* KMeansSwift.app */,
 				3256FCD41C2977E200FFD557 /* KMeansSwiftTests.xctest */,
+				1CBE05811D19216F008573BC /* KMeansSwift Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,6 +147,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1CBE05801D19216F008573BC /* KMeansSwift Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1CBE058B1D19216F008573BC /* Build configuration list for PBXNativeTarget "KMeansSwift Tests" */;
+			buildPhases = (
+				1CBE057D1D19216F008573BC /* Sources */,
+				1CBE057E1D19216F008573BC /* Frameworks */,
+				1CBE057F1D19216F008573BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1CBE05881D19216F008573BC /* PBXTargetDependency */,
+			);
+			name = "KMeansSwift Tests";
+			productName = "KMeansSwift Tests";
+			productReference = 1CBE05811D19216F008573BC /* KMeansSwift Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		3256FCBF1C2977E200FFD557 /* KMeansSwift */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3256FCDD1C2977E200FFD557 /* Build configuration list for PBXNativeTarget "KMeansSwift" */;
@@ -152,9 +207,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = sdq;
 				TargetAttributes = {
+					1CBE05801D19216F008573BC = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 3256FCBF1C2977E200FFD557;
+					};
 					3256FCBF1C2977E200FFD557 = {
 						CreatedOnToolsVersion = 7.2;
 					};
@@ -179,11 +238,19 @@
 			targets = (
 				3256FCBF1C2977E200FFD557 /* KMeansSwift */,
 				3256FCD31C2977E200FFD557 /* KMeansSwiftTests */,
+				1CBE05801D19216F008573BC /* KMeansSwift Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1CBE057F1D19216F008573BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3256FCBE1C2977E200FFD557 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -204,6 +271,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1CBE057D1D19216F008573BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CBE05861D19216F008573BC /* KMeansSwift_Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3256FCBC1C2977E200FFD557 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -225,6 +300,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1CBE05881D19216F008573BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3256FCBF1C2977E200FFD557 /* KMeansSwift */;
+			targetProxy = 1CBE05871D19216F008573BC /* PBXContainerItemProxy */;
+		};
 		3256FCD61C2977E200FFD557 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3256FCBF1C2977E200FFD557 /* KMeansSwift */;
@@ -252,6 +332,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1CBE05891D19216F008573BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INFOPLIST_FILE = "KMeansSwift Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yottabyt.es.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KMeansSwift.app/KMeansSwift";
+			};
+			name = Debug;
+		};
+		1CBE058A1D19216F008573BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "KMeansSwift Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yottabyt.es.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KMeansSwift.app/KMeansSwift";
+			};
+			name = Release;
+		};
 		3256FCDB1C2977E200FFD557 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -269,13 +389,13 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_DYNAMIC_NO_PIC = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -294,6 +414,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Debug;
 		};
@@ -314,12 +435,13 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -329,6 +451,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -339,11 +462,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = KMeansSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.shidanqing.kmeans;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -351,11 +476,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = KMeansSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.shidanqing.kmeans;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -386,6 +513,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1CBE058B1D19216F008573BC /* Build configuration list for PBXNativeTarget "KMeansSwift Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CBE05891D19216F008573BC /* Debug */,
+				1CBE058A1D19216F008573BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		3256FCBB1C2977E200FFD557 /* Build configuration list for PBXProject "KMeansSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -393,7 +529,7 @@
 				3256FCDC1C2977E200FFD557 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		3256FCDD1C2977E200FFD557 /* Build configuration list for PBXNativeTarget "KMeansSwift" */ = {
 			isa = XCConfigurationList;
@@ -402,7 +538,7 @@
 				3256FCDF1C2977E200FFD557 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		3256FCE01C2977E200FFD557 /* Build configuration list for PBXNativeTarget "KMeansSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -411,7 +547,7 @@
 				3256FCE21C2977E200FFD557 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,6 +10,7 @@ import Foundation
 import Accelerate
 import Darwin
 
+
 typealias KMVectors = Array<[Double]>
 typealias KMVector = [Double]
 

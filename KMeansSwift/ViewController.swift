@@ -56,6 +56,16 @@ class ViewController: UIViewController {
                         self.spaceView.addSubview(point)
                     }
                 }
+                
+                for vector in centroids{
+                    let pointFrameC = CGRectMake(CGFloat(vector[0]) - 10, CGFloat(vector[1]) - 10, 20.0, 20.0)
+                    let pointC = UIImageView(frame: pointFrameC)
+                    pointC.image = UIImage(named: "gray")
+                    self.spaceView.addSubview(pointC)
+                }
+                
+                self.visualizeCentroids(centroids);
+
             }
             self.setButtonEnable(true)
         }
@@ -69,6 +79,9 @@ class ViewController: UIViewController {
         KMeans.clusteringNumber = 2
         KMeans.clustering(500) { [unowned self] (success, centroids, clusters) -> () in
             if success {
+                
+                
+                
                 for point:UIView in self.spaceView.subviews {
                     point.removeFromSuperview()
                 }
@@ -84,6 +97,9 @@ class ViewController: UIViewController {
                         self.spaceView.addSubview(point)
                     }
                 }
+                
+                self.visualizeCentroids(centroids);
+                
             }
             self.setButtonEnable(true)
         }
@@ -123,6 +139,16 @@ class ViewController: UIViewController {
         clusterButton1.enabled = enable
         clusterButton2.enabled = enable
         clearButton.enabled = enable
+    }
+    
+    
+    private func visualizeCentroids(centroids:KMVectors){
+        for vector in centroids{
+            let pointFrameC = CGRectMake(CGFloat(vector[0]) - 10, CGFloat(vector[1]) - 10, 20.0, 20.0)
+            let pointC = UIImageView(frame: pointFrameC)
+            pointC.image = UIImage(named: "gray")
+            self.spaceView.addSubview(pointC)
+        }
     }
 
 }
