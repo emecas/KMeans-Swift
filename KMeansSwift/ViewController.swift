@@ -128,6 +128,9 @@ class ViewController: UIViewController {
         for point:UIView in self.spaceView.subviews {
             point.removeFromSuperview()
         }
+        
+        generateRandomPoints(100)
+        
         setButtonEnable(true)
     }
     
@@ -168,6 +171,7 @@ class ViewController: UIViewController {
         }
     }
     
+    
     private func removeCentroids(centroids:KMVectors){
         setButtonEnable(false)
         for point:UIView in self.spaceView.subviews {
@@ -181,6 +185,31 @@ class ViewController: UIViewController {
         }
         setButtonEnable(true)
     }
+    
+
+    
+    private func generateRandomPoints(number:Int){
+        setButtonEnable(false)
+        
+        let maxX:Float = (Float)(self.spaceView.bounds.maxX-10);
+        let maxY:Float = (Float)(self.spaceView.bounds.maxY-10);
+        
+        for _ in 0...100{
+            
+            let x:CGFloat = CGFloat( (Float(arc4random()) / Float(UINT32_MAX)) * (maxX - 10) + 10)
+            let y:CGFloat = CGFloat((Float(arc4random()) / Float(UINT32_MAX))  * (maxY - 10) + 10)
+            let pointFrameC = CGRectMake(  x - 10, y - 10, 20.0, 20.0)
+            let pointC = UIImageView(frame: pointFrameC)
+            pointC.image = UIImage(named: "gray")
+            self.spaceView.addSubview(pointC)
+            KMeans.addVector([Double(x), Double(y)])
+            
+        }
+        
+        setButtonEnable(true)
+        
+    }
+    
 
 }
 
