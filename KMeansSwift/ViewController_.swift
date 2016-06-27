@@ -16,8 +16,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var clusterButton2: UIButton!
     @IBOutlet weak var clearButton: UIButton!
     
-    @IBOutlet weak var generateSwitch: UISwitch!
-    
     @IBOutlet weak var centroidsSwitch: UISwitch!
     
     //var showCentroids:Bool
@@ -131,14 +129,10 @@ class ViewController: UIViewController {
             point.removeFromSuperview()
         }
         
-        if(generateSwitch.on){
-            generateRandomPoints(100)
-        }
+        generateRandomPoints(100)
         
         setButtonEnable(true)
     }
-    
-    
     
     func tapSpaceView(recognizer:UITapGestureRecognizer) {
         let location = recognizer.locationInView(spaceView)
